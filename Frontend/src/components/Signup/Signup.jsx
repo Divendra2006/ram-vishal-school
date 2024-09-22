@@ -44,7 +44,7 @@ const Signup = () => {
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-100 p-4">
-      <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+      <div className="bg-white p-10 rounded-lg shadow-lg w-full max-w-lg">
         {/* Heading */}
         <h1 className="text-3xl font-bold text-center mb-6 text-blue-600">Sign Up</h1>
 
