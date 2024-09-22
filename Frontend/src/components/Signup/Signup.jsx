@@ -43,10 +43,10 @@ const Signup = () => {
   };
 
   return (
-    <div className="flex justify-center items-center h-screen bg-gray-100">
+    <div className="flex justify-center items-center min-h-screen bg-gray-100 p-4">
       <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
         {/* Heading */}
-        <h1 className="text-3xl font-bold text-center mb-6">Sign Up</h1>
+        <h1 className="text-3xl font-bold text-center mb-6 text-blue-600">Sign Up</h1>
 
         {/* Signup Form */}
         <form onSubmit={handleSubmit} className="space-y-4">
@@ -61,8 +61,9 @@ const Signup = () => {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className="w-full p-2 border border-gray-300 rounded-lg"
+              className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="Enter your email"
+              required
             />
             {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
           </div>
@@ -78,8 +79,9 @@ const Signup = () => {
               name="password"
               value={formData.password}
               onChange={handleChange}
-              className="w-full p-2 border border-gray-300 rounded-lg"
+              className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="Enter your password"
+              required
             />
             {errors.password && <p className="text-red-500 text-sm mt-1">{errors.password}</p>}
           </div>
@@ -95,15 +97,16 @@ const Signup = () => {
               name="confirmPassword"
               value={formData.confirmPassword}
               onChange={handleChange}
-              className="w-full p-2 border border-gray-300 rounded-lg"
+              className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="Confirm your password"
+              required
             />
             {errors.confirmPassword && (
               <p className="text-red-500 text-sm mt-1">{errors.confirmPassword}</p>
             )}
           </div>
 
-          <button type="submit" className="w-full bg-orange-500 text-white p-2 rounded-lg">
+          <button type="submit" className="w-full bg-orange-500 text-white p-2 rounded-lg hover:bg-orange-600 transition-colors duration-200">
             Sign Up
           </button>
         </form>

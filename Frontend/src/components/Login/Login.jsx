@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+import { Link } from 'react-router-dom';
 
 const Login = () => {
   const [profile, setProfile] = useState(null); // State to track selected profile (teacher/student)
-  
+
   const handleProfileSelect = (selectedProfile) => {
     setProfile(selectedProfile);
   };
 
   return (
-    <div className="flex justify-center items-center h-screen bg-gray-100">
+    <div className="flex justify-center items-center min-h-screen bg-gray-100 p-4">
       <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
         {/* Heading */}
-        <h1 className="text-3xl font-bold text-center mb-6">Login</h1>
-        
+        <h1 className="text-3xl font-bold text-center mb-6 text-blue-600">Login</h1>
+
         {/* Profile Selection */}
         {!profile && (
           <div>
@@ -22,12 +22,12 @@ const Login = () => {
               {/* Teacher Avatar */}
               <div
                 onClick={() => handleProfileSelect('teacher')}
-                className="cursor-pointer text-center"
+                className="cursor-pointer text-center hover:scale-105 transition-transform duration-200"
               >
                 <img
                   src="https://via.placeholder.com/100" // Placeholder image, replace with actual teacher avatar
                   alt="Teacher Avatar"
-                  className="w-24 h-24 mx-auto mb-2 rounded-full"
+                  className="w-24 h-24 mx-auto mb-2 rounded-full border-2 border-blue-500 transition-transform duration-200"
                 />
                 <p className="font-semibold">Teacher</p>
               </div>
@@ -35,12 +35,12 @@ const Login = () => {
               {/* Student Avatar */}
               <div
                 onClick={() => handleProfileSelect('student')}
-                className="cursor-pointer text-center"
+                className="cursor-pointer text-center hover:scale-105 transition-transform duration-200"
               >
                 <img
                   src="https://via.placeholder.com/100" // Placeholder image, replace with actual student avatar
                   alt="Student Avatar"
-                  className="w-24 h-24 mx-auto mb-2 rounded-full"
+                  className="w-24 h-24 mx-auto mb-2 rounded-full border-2 border-blue-500 transition-transform duration-200"
                 />
                 <p className="font-semibold">Student</p>
               </div>
@@ -60,8 +60,9 @@ const Login = () => {
                 <input
                   type="email"
                   id="email"
-                  className="w-full p-2 border border-gray-300 rounded-lg"
+                  className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                   placeholder="Enter your email"
+                  required
                 />
               </div>
 
@@ -72,12 +73,13 @@ const Login = () => {
                 <input
                   type="password"
                   id="password"
-                  className="w-full p-2 border border-gray-300 rounded-lg"
+                  className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                   placeholder="Enter your password"
+                  required
                 />
               </div>
 
-              <button type="submit" className="w-full bg-orange-500 text-white p-2 rounded-lg">
+              <button type="submit" className="w-full bg-orange-500 text-white p-2 rounded-lg hover:bg-orange-600 transition-colors duration-200">
                 Login
               </button>
             </form>
@@ -93,7 +95,7 @@ const Login = () => {
             <div className="text-center mt-6">
               <p className="text-sm">
                 Don't have an account?{' '}
-                <Link to="/Signup" className="text-orange-500 underline">
+                <Link to="/signup" className="text-orange-500 underline">
                   Create an account
                 </Link>
               </p>

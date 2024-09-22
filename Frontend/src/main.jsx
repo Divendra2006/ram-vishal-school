@@ -9,6 +9,7 @@ import Contact from './components/Contact/Contact.jsx'
 import Login from './components/Login/Login.jsx'
 import Signup from './components/Signup/Signup.jsx'
 import TermsAndConditions from './components/TermsAndConditions/TermsAndConditions.jsx'
+import Career from './components/Career/Career.jsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -16,6 +17,7 @@ const router = createBrowserRouter(
       <Route path='' element={<Home/>}></Route>
       <Route path='/about' element={<About/>} ></Route>
       <Route path='/contact' element={<Contact/>} ></Route>
+      <Route path='/career' element={<Career/>} ></Route>
       <Route path='/Login' element={<Login/>} ></Route>
       <Route path='/Signup' element={<Signup/>} ></Route>
       <Route path='/terms' element={<TermsAndConditions/>}></Route>

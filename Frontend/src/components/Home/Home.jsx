@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 
 function Home() {
-  return(
+  return (
     <div className="bg-gray-100">
       {/* Banner Section */}
       <div className="relative">
@@ -16,7 +16,7 @@ function Home() {
       </div>
 
       {/* Content Section */}
-      <div className="flex max-w-6xl mx-auto p-4">
+      <div className="flex flex-col md:flex-row max-w-6xl mx-auto p-4">
         {/* Left Side: Paragraph */}
         <div className="flex-1 p-4">
           <p className="text-lg text-gray-700">
@@ -29,22 +29,34 @@ function Home() {
         </div>
 
         {/* Right Side: Image Below Banner */}
-        <div className="w-1/3 flex justify-center">
+        <div className="w-full md:w-1/3 flex justify-center p-4">
           <img
             src="your-right-image-url.jpg" // Replace with your right image URL
             alt="Right Image"
-            className="w-[816px] h-[1005px] object-cover"
+            className="w-full h-auto max-w-[816px] max-h-[1005px] object-cover"
           />
         </div>
       </div>
 
-      {/* Additional Image on Left */}
-      <div className="flex justify-center mb-4">
-        <img
-          src="your-left-image-url.jpg" // Replace with your left image URL
-          alt="Left Image"
-          className="w-[816px] h-[1005px] object-cover"
-        />
+      {/* Additional Image and Chairman's Note */}
+      <div className="flex flex-col md:flex-row justify-center mb-4">
+        <div className="w-full md:w-1/3 p-4 flex justify-center">
+          <img
+            src="your-left-image-url.jpg" // Replace with your left image URL
+            alt="Left Image"
+            className="w-full h-auto max-w-[816px] max-h-[1005px] object-cover"
+          />
+        </div>
+        <div className="flex-1 p-4 md:w-2/3 flex flex-col justify-center">
+          <h2 className="text-xl font-bold mb-2">Message from the Chairman</h2>
+          <p className="text-lg text-gray-700">
+            Our school is committed to providing a holistic educational experience
+            that nurtures each student’s unique talents and abilities. We believe
+            in fostering a supportive environment where students can grow, learn,
+            and thrive. With a focus on academic excellence and character development,
+            we prepare our students for the challenges and opportunities of the future.
+          </p>
+        </div>
       </div>
 
       {/* Motivational Quote */}
@@ -56,7 +68,6 @@ function Home() {
       </div>
     </div>
   );
-
 }
 
-export default Home
+export default Home;
