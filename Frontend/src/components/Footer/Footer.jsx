@@ -13,7 +13,7 @@ function Footer() {
     // Fetch school information from the API
     const fetchSchoolInfo = async () => {
       try {
-        const response = await fetch('https://api.example.com/school-info'); // Replace with your API endpoint
+        const response = await fetch(''); // Replace with your API endpoint
         const data = await response.json();
         setSchoolInfo({
           location: data.location,
@@ -21,7 +21,7 @@ function Footer() {
           contactNo: data.contactNo,
         });
       } catch (error) {
-        console.error('Error fetching school info:', error);
+        console.log('Error fetching school info:', error)
       }
     };
 

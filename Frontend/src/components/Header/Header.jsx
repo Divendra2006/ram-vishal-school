@@ -9,7 +9,7 @@ function Header() {
   };
 
   return (
-    <header className="bg-gray-600 text-white p-4 mb-12">
+    <header className="bg-gray-600 text-white p-10 mb-12">
       <div className="container mx-auto flex justify-between items-center">
         {/* School Logo */}
         <div className="flex items-center space-x-10">
@@ -65,6 +65,9 @@ function Header() {
           >
             About
           </NavLink>
+          {/* <NavLink
+          to="/dashboard">
+          </NavLink> */}
           <NavLink
             to="/contact"
             className={({ isActive }) =>

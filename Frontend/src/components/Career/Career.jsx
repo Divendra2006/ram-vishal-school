@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Career(){
+function Career() {
   const mentors = [
     {
       name: 'Divendra Yadav',
@@ -17,25 +17,35 @@ function Career(){
   ];
 
   return (
-    <div className="max-w-6xl mt-16 mx-auto p-6 bg-gray-100">
-      <h1 className="text-3xl font-bold text-center mb-8">Meet Our Career Mentors</h1>
-      <h2 className='text-xl font-bold text-center mb-8' >Ask your any doubt related to your career through email</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg shadow-lg mt-16 py-8">
+      <h1 className="text-4xl font-bold text-center text-blue-800 mb-6">Meet Our Career Mentors</h1>
+      <h2 className="text-xl font-medium text-center text-gray-700 mb-8">
+        Reach out with any career-related doubts via email!
+      </h2>
+
+      {/* Stack mentors vertically on small screens */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
         {mentors.map((mentor, index) => (
-          <div key={index} className="bg-white p-4 rounded-lg shadow-md text-center">
+          <div
+            key={index}
+            className="flex flex-col items-center justify-center bg-white p-6 rounded-2xl shadow-xl text-center transition-transform transform hover:scale-105"
+          >
             <img
               src={mentor.photo}
               alt={mentor.name}
-              className="w-36 h-36 rounded-full mx-auto mb-4"
+              className="w-40 h-40 rounded-full mb-4 border-4 border-blue-300 shadow-lg"
             />
-            <h2 className="text-3xl font-semibold mb-4">{mentor.name}</h2>
-            <h3  className="text-xl font-semibold mb-3">{mentor.post}</h3>
-            <p className="text-gray-600 font-semibold">✉️:{mentor.email}</p>
+            <h2 className="text-2xl font-semibold text-blue-700 mb-2">{mentor.name}</h2>
+            <h3 className="text-lg font-medium text-gray-600 mb-3">{mentor.post}</h3>
+            <p className="text-gray-600 font-semibold">✉️ {mentor.email}</p>
           </div>
         ))}
       </div>
     </div>
   );
-};
+}
 
 export default Career;
+
+
+

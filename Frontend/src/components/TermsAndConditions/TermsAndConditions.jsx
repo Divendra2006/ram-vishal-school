@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const TermsAndConditions = () => {
   return (
-    <div className="max-w-3xl mx-auto p-6 bg-white shadow-md rounded-lg">
+    <div className="max-w-3xl mx-auto p-6 bg-gradient-to-r from-blue-50 to-blue-100 shadow-md rounded-lg">
       <h1 className="text-3xl font-bold text-center mb-6 text-blue-600">Terms and Conditions</h1>
 
       <h2 className="text-2xl font-semibold mt-4" id="introduction">1. Introduction</h2>
